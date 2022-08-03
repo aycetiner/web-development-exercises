@@ -1,0 +1,13 @@
+h1 {
+  position: relative;
+  left: auto;
+}
+
+button {
+  position: relative;
+  left: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
