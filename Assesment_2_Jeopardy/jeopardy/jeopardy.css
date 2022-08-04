@@ -1,0 +1,27 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+.tablee th,
+.tablee td {
+  padding: 5px;
+  border: 2px solid aliceblue;
+  font-size: 0.9em;
+  text-align: center;
+  height: 10em;
+  background-color: #080d99;
+  color: aliceblue;
+
+  overflow: hidden;
+}
+
+.tablee {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+  table-layout: fixed;
+}
