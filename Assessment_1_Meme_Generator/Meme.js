@@ -8,20 +8,30 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   console.log("Form is submitted!", imgInput.value, topTextInput);
   const newMemeImg = document.createElement("img");
+  const newX = document.createElement("img");
   const newTopText = document.createElement("p");
   const newBottomText = document.createElement("p");
   const newMeme = document.createElement("div");
-  //   const xImg = (newMemeImg.src = imgInput.value);
+  const imgContainer = document.createElement("div");
+  // hoverContainer.innerText = "X";
   newMemeImg.src = imgInput.value;
+  newX.src = "https://cdn-icons-png.flaticon.com/512/109/109602.png";
   newTopText.innerText = topTextInput.value;
   newBottomText.innerText = bottomTextInput.value;
   newMeme.classList.add("new-meme");
+  newX.classList.add("new-x");
+  imgContainer.classList.add("img-container");
   newTopText.classList.add("top-text");
   newBottomText.classList.add("bottom-text");
-  if (newMemeImg.getAttribute("src") !== "") {
-    newMeme.appendChild(newMemeImg);
+  // hoverContainer.classList.add("hover-container");
+  if (isValidHttpUrl(newMemeImg.getAttribute("src"))) {
+    imgContainer.appendChild(newMemeImg);
     newMeme.appendChild(newTopText);
     newMeme.appendChild(newBottomText);
+    newMeme.appendChild(newX);
+    newMeme.appendChild(imgContainer);
+
+    // hoverContainer.appendChild(newMeme);
     memeOutput.appendChild(newMeme);
   }
 });
@@ -31,3 +41,15 @@ memeOutput.addEventListener("click", function (e) {
     e.target.parentElement.remove();
   }
 });
+
+function isValidHttpUrl(string) {
+  let url;
+
+  try {
+    url = new URL(string);
+  } catch (error) {
+    alert(error, "Not a valid url");
+  }
+
+  return url.protocol === "http:" || url.protocol === "https:";
+}
