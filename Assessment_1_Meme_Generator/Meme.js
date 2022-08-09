@@ -6,14 +6,14 @@ const memeOutput = document.querySelector("#meme_output");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log("Form is submitted!", imgInput.value, topTextInput);
+  // console.log("Form is submitted!", imgInput.value, topTextInput);
   const newMemeImg = document.createElement("img");
   const newX = document.createElement("img");
   const newTopText = document.createElement("p");
   const newBottomText = document.createElement("p");
   const newMeme = document.createElement("div");
   const imgContainer = document.createElement("div");
-  // hoverContainer.innerText = "X";
+
   newMemeImg.src = imgInput.value;
   newX.src = "https://cdn-icons-png.flaticon.com/512/109/109602.png";
   newTopText.innerText = topTextInput.value;
@@ -23,7 +23,7 @@ form.addEventListener("submit", function (e) {
   imgContainer.classList.add("img-container");
   newTopText.classList.add("top-text");
   newBottomText.classList.add("bottom-text");
-  // hoverContainer.classList.add("hover-container");
+
   if (isValidHttpUrl(newMemeImg.getAttribute("src"))) {
     imgContainer.appendChild(newMemeImg);
     newMeme.appendChild(newTopText);
@@ -31,7 +31,6 @@ form.addEventListener("submit", function (e) {
     newMeme.appendChild(newX);
     newMeme.appendChild(imgContainer);
 
-    // hoverContainer.appendChild(newMeme);
     memeOutput.appendChild(newMeme);
   }
 });
