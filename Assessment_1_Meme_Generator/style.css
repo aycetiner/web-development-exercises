@@ -36,18 +36,20 @@ div#input_form {
 .new-meme {
   display: inline-block;
   position: relative;
-  padding: -25px;
   width: 500px;
   height: 500px;
-  margin: 10px, 10px, 10px;
+  margin: 20px;
   text-align: center;
   justify-content: space-around;
+  background-color: #1568ed;
 }
 
 .top-text {
   position: absolute;
   word-break: break-all;
   top: 2%;
+  left: 10%;
+  right: 10%;
   /* display: ; */
   font-size: 200%;
   fill: #ccc;
@@ -57,13 +59,16 @@ div#input_form {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   padding: auto;
+  text-align: middle;
 }
 
 .bottom-text {
   position: absolute;
   word-break: break-all;
   inline-size: auto;
-  bottom: 10%;
+  bottom: 2%;
+  left: 10%;
+  right: 10%;
   /* display: ; */
   font-size: 200%;
   fill: #ccc;
@@ -73,6 +78,7 @@ div#input_form {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   padding: auto;
+  text-align: middle;
 }
 
 img {
@@ -84,7 +90,7 @@ img {
 .img-container {
   width: 100%;
   height: 100%;
-  background-color: black;
+  /* background-color: black; */
 }
 
 /* .hover-container {
