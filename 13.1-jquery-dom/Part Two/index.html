@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rate a Movie!</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 id="title" class="text-center">Welcome to Rate-a-Movie!</h1>
+
+      <form action="" class="row justify-content-center m-4">
+        <div class="row justify-content-center m-4">
+          <div class="col-md-5 m-3">
+            <label for="movie-name" class="form-label">Movie Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="movie-name"
+              required
+              minlength="2"
+              placeholder="Enter the name of the movie you want to rate"
+            />
+          </div>
+          <div class="col-md-5 m-3">
+            <label for="movie-rating" class="form-label">Rating 0-10</label>
+            <input
+              type="range"
+              min="0"
+              max="10"
+              step="1"
+              class="form-range"
+              id="movie-rating"
+            />
+            <span id="show-rating">5</span>
+          </div>
+        </div>
+        <div class="row justify-content-center m-4">
+          <div class="col-1">
+            <button type="submit" class="btn btn-primary btn-lg">Add</button>
+          </div>
+        </div>
+      </form>
+
+      <div id="movie-list" class="row">
+        <table class="table table-striped" style="table-layout: fixed">
+          <thead>
+            <tr>
+              <th scope="col-md-2">Movie Names</th>
+              <th scope="col-md-2">Ratings</th>
+              <th scope="col-md-2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lord of the Rings: Return of the King</td>
+              <td>10</td>
+              <td>
+                <button
+                  type="submit"
+                  id="delete-btn"
+                  class="btn btn-danger btn-lg"
+                >
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>The Dark Knight</td>
+              <td>9</td>
+              <td>
+                <button
+                  type="submit"
+                  id="delete-btn"
+                  class="btn btn-danger btn-lg"
+                >
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Interstellar</td>
+              <td>8</td>
+              <td>
+                <button
+                  type="submit"
+                  id="delete-btn"
+                  class="btn btn-danger btn-lg"
+                >
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
