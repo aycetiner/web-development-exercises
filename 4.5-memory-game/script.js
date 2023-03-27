@@ -61,9 +61,8 @@ function createDivsForColors(colorArray) {
   }
 }
 
-// TODO: Implement this function!
+// Memory game logic!
 function handleCardClick(event) {
-  // you can use event.target to see which element was clicked
   if (noClicking) return;
   if (event.target.classList.contains("flipped")) return;
 
@@ -100,19 +99,15 @@ function handleCardClick(event) {
       }, 1000);
     }
   }
+  // handling the end of game
   if (cardsFlipped === COLORS.length) {
-    if (window.confirm("Game over! Click yes to play again!")) {
+    if (window.confirm("Congrats! Click OK to play again!")) {
       setInterval(function () {
         location.reload();
       }, 1000);
     } else {
       return false;
     }
-
-    // alert("game over!");
-    // setInterval(function () {
-    //   location.reload();
-    // }, 2000);
   }
 }
 
