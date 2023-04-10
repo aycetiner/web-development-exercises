@@ -9,23 +9,20 @@ What is a URL?
 
 A URL(uniform resource locators) is the address for resources that are on the internet. URLs has a scheme(for identifying the protocol like http), a hostname(the host address that holds the resource), a path(the specific resource in the host address), and a query string(some query information that the resource can use to get a more specific information, usually in form of ?x=1&y=2)
 
-What is DNS?
-
-DNS (Domain Name System) is the phonebook of the internet. 
-
 What is a query string?
-
+A query string is a part of a URL that contains additional information in the form of key-value pairs. The query string starts with a question mark "?" and is followed by one or more key-value pairs separated by an ampersand "&". It is often used to pass data between a web page and a web server.
 
 What are two HTTP verbs and how are they different?
-
+Two common HTTP verbs are GET and POST. GET is used to retrieve information from a server, while POST is used to send data to a server for processing. GET requests are usually cacheable and idempotent, while POST requests are not cacheable and can have side effects on the server.
 
 What is an HTTP request?
-
+An HTTP request is a message sent by a client (e.g. a web browser) to a server requesting some action to be taken. An HTTP request usually contains a URL, an HTTP method (such as GET or POST), and optionally some headers and a message body.
 
 What is an HTTP response?
-
+An HTTP response is a message sent by a server to a client in response to an HTTP request. An HTTP response usually contains a status code (such as 200 OK or 404 Not Found), some headers, and optionally a message body.
 
 What is an HTTP header? Give a couple examples of request and response headers you have seen.
-
+An HTTP header is a piece of meta-information sent along with an HTTP request or response. Examples of request headers include "User-Agent" (which identifies the client software), "Accept" (which specifies the media types that the client can handle), and "Authorization" (which provides authentication information). Examples of response headers include "Content-Type" (which specifies the type of content in the response), "Cache-Control" (which controls caching behavior), and "Set-Cookie" (which sets a cookie in the client's browser).
 
 What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+When you type a URL like "http://somesite.com/some/page.html" into a browser, the browser sends an HTTP request to the server at "somesite.com" for the resource at "/some/page.html". The server responds with an HTTP response that contains the requested resource (if it exists) along with any headers and status codes. The browser then renders the resource on the screen using HTML, CSS, and JavaScript.
